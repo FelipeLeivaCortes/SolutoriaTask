@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndicatorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndicatorController::class, 'main'])->name('main');
+
+Route::post('/downloadData', [IndicatorController::class, 'downloadData'])->name('downloadData');
+
+Route::post('/getData', [IndicatorController::class, 'getData'])->name('getData');
+
+Route::resource('data', IndicatorController::class)->names('data');
