@@ -21,4 +21,4 @@ SET time_zone = "+00:00";
 -- Base de datos: `easyappointments`
 --
 CREATE DATABASE IF NOT EXISTS `solutoria_task` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `easyappointments`;
+USE `solutoria_task`;
